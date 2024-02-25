@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Instagram Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("C:/Users/15sub/Downloads/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL3Y1NDZiYXRjaDMtbXludC0zNC1iYWRnZXdhdGVyY29sb3IuanBn.webp"); /* Background image for the whole page */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .profile h2 {
+            margin: 5px 0;
+        }
+        .posts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .post img {
+            width: 100%;
+            height: 200px; /* Set default height for post images */
+            border-radius: 5px;
+        }
+        .post .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .post .actions a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        .post .actions a:hover {
+            color: #666;
+        }
+        .post .actions a i {
+            margin-right: 5px;
+        }
+        /* Hide the file input */
+        #fileInput {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="C:/Users/15sub/OneDrive/Pictures/Screenshots/download (4).jpg" alt="Profile Picture">
+            <h2>subasenthil-515</h2>
+        </div>
+        <h3>Your Posts</h3>
+        <div class="posts">
+            <div class="post">
+                <div class="username">
+                    
+                </div>
+                <img src="C:/Users/15sub/OneDrive/Documents/sem 5/ANN/download (1).jpg" alt="Post 1">
+                <div class="actions">
+                    <a href="#"><span>&#x2661;</span> Like</a>
+                    <a href="#"><span>&#x1F4E5;</span> Share</a>
+                </div>
+            </div>
+           <div class="post">
+                <div class="username">
+                    
+                </div>
+                <img src="C:/Users/15sub/OneDrive/Pictures/Screenshots/download (3).jpg" alt="Post 2">
+                <div class="actions">
+                    <a href="#"><span>&#x2661;</span> Like</a>
+                    <a href="#"><span>&#x1F4E5;</span> Share</a>
+                </div>
+            </div>
+            <div class="post">
+                <div class="username">
+                    
+                </div>
+                <img src="C:/Users/15sub/OneDrive/Documents/sem 5/ANN/download.jpg" alt="Post 3">
+                <div class="actions">
+                    <a href="#"><span>&#x2661;</span> Like</a>
+                    <a href="#"><span>&#x1F4E5;</span> Share</a>
+                </div>
+            </div>
+            <div class="post">
+                <div class="username">
+                    
+                </div>
+                <img src="C:/Users/15sub/OneDrive/Pictures/Screenshots/download (1).jpg" alt="Post 4">
+                <div class="actions">
+                    <a href="#"><span>&#x2661;</span> Like</a>
+                    <a href="#"><span>&#x1F4E5;</span> Share</a>
+                </div>
+            </div>
+            <div class="post">
+                <div class="username">
+                   
+                </div>
+                <img src="C:/Users/15sub/OneDrive/Pictures/Screenshots/images (1).jpg" alt="Post 5">
+                <div class="actions">
+                    <a href="#"><span>&#x2661;</span> Like</a>
+                    <a href="#"><span>&#x1F4E5;</span> Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ <input type="file" id="fileInput">
+    <script>
+        // Function to handle when the "Add Post" button is clicked
+        document.getElementById('addPostBtn').addEventListener('click', function() {
+            // Trigger click event on file input
+            document.getElementById('fileInput').click();
+        });
+        // Function to handle when an image is selected
+        document.getElementById('fileInput').addEventListener('change', function() {
+            // Get the selected file
+            var file = this.files[0];
+            if (file) {
+                // Create a new post element
+                var post = document.createElement('div');
+                post.className = 'post';
+                // Create a username section
+                var usernameDiv = document.createElement('div');
+                usernameDiv.className = 'username';
+                usernameDiv.innerHTML = '<img src="https://via.placeholder.com/50" alt="User Profile"><span>Username</span>';
+                post.appendChild(usernameDiv);
+                // Create an image element for the selected image
+                var image = document.createElement('img');
+                image.src = URL.createObjectURL(file);
+                image.alt = 'New Post';
+                post.appendChild(image);
+                // Create actions section
+                var actionsDiv = document.createElement('div');
+                actionsDiv.className = 'actions';
+                actionsDiv.innerHTML = '<a href="#"><span>&#x2661;</span> Like</a><a href="#"><span>&#x1F4E5;</span> Share</a>';
+                post.appendChild(actionsDiv);
+                // Add the new post to the content area
+                document.getElementById('postsContainer').appendChild(post);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("C:/Users/15sub/Downloads/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL3Y1NDZiYXRjaDMtbXludC0zNC1iYWRnZXdhdGVyY29sb3IuanBn.webp"); /* Background image for the whole page */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .navbar h1 {
+            margin: 0;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar li {
+            margin-right: 20px;
+        }
+        .navbar li:last-child {
+            margin-right: 0;
+        }
+        .navbar li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .navbar li a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .post {
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 300px;
+        }
+        .post img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .post .username {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .post .username img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .post .actions a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        .post .actions a:hover {
+            color: #666;
+        }
+        .post .actions a i {
+            margin-right: 5px;
+        }
+        /* Hide the file input */
+        #fileInput {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>My App</h1>
+        <ul>
+         
+            <li><a href="profile.html">Profile</a></li> <!-- Updated href attribute -->
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Posts</a></li>
+            <li><a href="#" id="addPostBtn">Add Post</a></li>
+        </ul>
+           
+    </div>
+    <div class="content" id="postsContainer">
+        <div class="post">
+            <div class="username">
+                <img src="https://via.placeholder.com/50" alt="User Profile">
+                <span>Username</span>
+            </div>
+            <img src="C:/Users/15sub/OneDrive/Documents/sem 5/ANN/download (1).jpg" alt="Post 1">
+            <div class="actions">
+                <a href="#"><i class="fas fa-heart"></i> Like</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+            </div>
+        </div>
+       <div class="post">
+            <div class="username">
+                <img src="https://via.placeholder.com/50" alt="User Profile">
+                <span>Username</span>
+            </div>
+            <img src="C:/Users/15sub/Downloads/download (2).jpg">
+            <div class="actions">
+                <a href="#"><i class="fas fa-heart"></i> Like</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+            </div>
+        </div>
+        <div class="post">
+            <div class="username">
+                <img src="https://via.placeholder.com/50" alt="User Profile">
+                <span>Username</span>
+            </div>
+            <img src="C:/Users/15sub/OneDrive/Documents/sem 5/ANN/download.jpg" alt="Post 3">
+            <div class="actions">
+                <a href="#"><i class="fas fa-heart"></i> Like</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+            </div>
+        </div>
+        <div class="post">
+            <div class="username">
+                <img src="https://via.placeholder.com/50" alt="User Profile">
+                <span>Username</span>
+            </div>
+            <img src="C:/Users/15sub/OneDrive/Pictures/Screenshots/download (1).jpg" alt="Post 4">
+            <div class="actions">
+                <a href="#"><i class="fas fa-heart"></i> Like</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+            </div>
+        </div>
+       <div class="post">
+            <div class="username">
+                <img src="https://via.placeholder.com/50" alt="User Profile">
+                <span>Username</span>
+            </div>
+            <img src="C:/Users/15sub/Downloads/download (1).jpg">
+            <div class="actions">
+                <a href="#"><i class="fas fa-heart"></i> Like</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+            </div>
+        </div>
+         <div class="post">
+            <div class="username">
+                <img src="https://via.placeholder.com/50" alt="User Profile">
+                <span>Username</span>
+            </div>
+            <img src="C:/Users/15sub/Downloads/images (1).jpg">
+            <div class="actions">
+                <a href="#"><i class="fas fa-heart"></i> Like</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+            </div>
+        </div>
+        <div class="post">
+            <div class="username">
+                <img src="https://via.placeholder.com/50" alt="User Profile">
+                <span>Username</span>
+            </div>
+            <img src="C:/Users/15sub/OneDrive/Pictures/Screenshots/images (1).jpg" alt="Post 5">
+            <div class="actions">
+                <a href="#"><i class="fas fa-heart"></i> Like</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+            </div>
+        </div>
+         <div class="post">
+            <div class="username">
+                <img src="https://via.placeholder.com/50" alt="User Profile">
+                <span>Username</span>
+            </div>
+            <img src="C:/Users/15sub/Downloads/images.jpg">
+            <div class="actions">
+                <a href="#"><i class="fas fa-heart"></i> Like</a>
+                <a href="#"><i class="fas fa-share"></i> Share</a>
+            </div>
+        </div>
+       
+
+    <!-- File input for selecting images -->
+    <input type="file" id="fileInput">
+    <script>
+        // Function to handle when the "Add Post" button is clicked
+        document.getElementById('addPostBtn').addEventListener('click', function() {
+            // Trigger click event on file input
+            document.getElementById('fileInput').click();
+        });
+        // Function to handle when an image is selected
+        document.getElementById('fileInput').addEventListener('change', function() {
+            // Get the selected file
+            var file = this.files[0];
+            if (file) {
+                // Create a new post element
+                var post = document.createElement('div');
+                post.className = 'post';
+                // Create a username section
+                var usernameDiv = document.createElement('div');
+                usernameDiv.className = 'username';
+                usernameDiv.innerHTML = '<img src="https://via.placeholder.com/50" alt="User Profile"><span>Username</span>';
+                post.appendChild(usernameDiv);
+                // Create an image element for the selected image
+                var image = document.createElement('img');
+                image.src = URL.createObjectURL(file);
+                image.alt = 'New Post';
+                post.appendChild(image);
+                // Create actions section
+                var actionsDiv = document.createElement('div');
+                actionsDiv.className = 'actions';
+                actionsDiv.innerHTML = '<a href="#"><i class="fas fa-heart"></i> Like</a><a href="#"><i class="fas fa-share"></i> Share</a>';
+                post.appendChild(actionsDiv);
+                // Add the new post to the content area
+                document.getElementById('postsContainer').appendChild(post);
+            }
+        });
+    </script>
+</body>
+</html>
